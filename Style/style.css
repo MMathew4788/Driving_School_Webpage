@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Kanit&display=swap");
+.navbar_menu_links, .navbar_menu, .navbar_logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  background: #98DFD6;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+  padding: 1rem 3rem;
+}
+@media screen and (max-width: 810px) {
+  .navbar {
+    height: 100px;
+  }
+}
+.navbar_logo {
+  color: #00235B;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+@media screen and (max-width: 810px) {
+  .navbar_logo {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar_logo {
+    font-size: 2rem;
+  }
+}
+.navbar .hamburger {
+  opacity: 0;
+}
+@media screen and (max-width: 810px) {
+  .navbar .hamburger {
+    color: #00235B;
+    opacity: 1;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar .hamburger {
+    font-size: 2rem;
+    top: 1.5rem;
+  }
+}
+.navbar_menu {
+  list-style: none;
+  text-align: center;
+  margin-right: 24px;
+}
+@media screen and (max-width: 810px) {
+  .navbar_menu {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    margin: 0px;
+    background-color: #98DFD6;
+  }
+}
+.navbar_menu_links {
+  color: #00235B;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+@media screen and (max-width: 810px) {
+  .navbar_menu_links {
+    padding: 2rem 0;
+    font-size: xx-large;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar_menu_links {
+    padding: 1rem 0;
+    font-size: larger;
+  }
+}
+.navbar_menu_links:hover {
+  color: #E21818;
+  transition: all 0.4s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  background-color: #FFDD83;
+}
+.hero_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  margin: 0 auto;
+  z-index: 1;
+  height: 90vh;
+  width: 100%;
+  padding: 1rem 3rem;
+}
+@media screen and (max-width: 810px) {
+  .hero_container {
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem 3rem;
+  }
+}
+.hero_container_left {
+  width: 100%;
+  line-height: 1.2;
+  align-items: center;
+}
+@media screen and (max-width: 810px) {
+  .hero_container_left {
+    padding: 5rem 0;
+    height: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero_container_left {
+    line-height: 1.5;
+  }
+}
+.hero_container_left h1 {
+  font-size: 3.5rem;
+  color: #00235B;
+  font-style: "Kanit", sans-serif;
+  margin: 0 auto;
+}
+.hero_container_left h1 span {
+  padding: 0 1rem;
+  background-color: #E21818;
+  color: #FFDD83;
+  transform: skew(20deg, 0deg);
+  margin-left: 5rem;
+  display: inline-block;
+}
+.hero_container_left h1 span div {
+  transform: skew(-20deg, 0deg);
+}
+@media screen and (max-width: 480px) {
+  .hero_container_left h1 {
+    font-size: 2rem;
+  }
+}
+.hero_container_left h2 {
+  font-size: 3.5rem;
+  color: #00235B;
+  margin-left: 10rem;
+  font-style: "Kanit", sans-serif;
+}
+@media screen and (max-width: 480px) {
+  .hero_container_left h2 {
+    font-size: 2rem;
+  }
+}
+.hero_container_left h3 {
+  font-size: 2.5rem;
+  color: #E21818;
+}
+@media screen and (max-width: 480px) {
+  .hero_container_left h3 {
+    font-size: 1.5rem;
+  }
+}
+.hero_container_left p {
+  font-size: 1.25rem;
+  color: #00235B;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-style: "Inter", sans-serif;
+  padding-right: 2rem;
+}
+@media screen and (max-width: 480px) {
+  .hero_container_left p {
+    font-size: 1rem;
+    padding-right: 0;
+  }
+}
+.hero_container_left button {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  padding: 0.75rem 2rem;
+  background-color: #00235B;
+  border: 0;
+  transform: skew(20deg, 0deg);
+}
+.hero_container_left button a {
+  text-decoration: none;
+  color: #FFDD83;
+  display: inline-block;
+  transform: skew(-20deg, 0deg);
+}
+.hero_container_left button:hover {
+  background-color: #E21818;
+  transform: skew(-20deg, 0deg);
+}
+.hero_container_left button:hover a {
+  transform: skew(20deg, 0deg);
+}
+.hero_container_right {
+  width: 100%;
+}
+.hero_container_right img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 810px) {
+  .hero_container_right {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

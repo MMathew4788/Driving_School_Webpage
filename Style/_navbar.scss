@@ -1,0 +1,95 @@
+@import 'colors';
+@import 'media-queries';
+
+%align-center{
+    display: flex;
+    align-items: center;
+}
+.navbar{
+    background: $background2;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    padding: 1rem 3rem;
+
+    @include tablet{
+        height: 100px;
+    }
+
+    &_logo{
+        color: $primary;
+        cursor: pointer;
+        font-size: 2rem;
+        font-weight: 700;
+        text-decoration: none;
+        @extend %align-center;
+
+        @include tablet{
+            font-size: 3rem;
+        }
+        @include mobile {
+            font-size: 2rem;
+        }
+    }
+
+    .hamburger{
+        opacity: 0;
+
+        @include tablet {
+            color: $primary;
+            opacity: 1;
+            position: absolute;
+            top: 1rem;
+            right:1.5rem;
+            font-size: 3rem;
+        }
+        @include mobile{
+            font-size: 2rem;
+            top:1.5rem;
+        }
+    }
+
+    &_menu{
+        @extend %align-center;
+        list-style: none;
+        text-align: center;
+        margin-right: 24px;
+
+        @include tablet{
+            display: none;
+            position: absolute;
+            top:100px;
+            left:0;
+            width:100%;
+            margin: 0px;
+            background-color: $background2;
+        }
+
+        &_links{
+            color: $primary;
+            @extend %align-center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 0 1rem;
+            font-size: 1.5rem;
+            font-weight: 800;
+
+            @include tablet{
+                padding: 2rem 0;
+                font-size: xx-large;
+            }
+
+            @include mobile{
+                padding: 1rem 0;
+                font-size: larger;
+            }
+
+            &:hover{
+                color: $secondary;
+                transition: all .4s ease;
+            }
+        }
+    }
+}

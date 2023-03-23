@@ -1,0 +1,139 @@
+@import 'navbar';
+@import 'colors';
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Kanit&display=swap');
+
+$font-heading: 'Kanit', sans-serif;
+$font-paragraph: 'Inter', sans-serif;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+}
+
+//hero section
+.hero{
+    background-color: $background1;
+
+    &_container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-items: center;
+        margin: 0 auto;
+        z-index: 1;
+        height: 90vh;
+        width: 100%;
+        padding: 1rem 3rem;
+              
+        @include tablet{
+            flex-direction: column;
+            height: 100%;
+            padding: 1rem 3rem;
+        }
+      
+        &_left{
+            width:100%;
+            line-height: 1.2;
+            align-items: center;
+
+            
+            @include tablet{
+                padding: 5rem 0;
+                height: 50%;
+            }
+            @include mobile{
+                line-height: 1.5;
+            }
+
+            h1{
+                font-size: 3.5rem;
+                color: $primary;
+                font-style: $font-heading;
+                margin: 0 auto;
+                
+                span{
+                    padding: 0 1rem;
+                    background-color: $secondary;
+                    color: $background1;
+                    transform: skew(20deg, 0deg);
+                    margin-left: 5rem;
+                    display: inline-block;
+                    div {
+                        transform: skew(-20deg, 0deg);
+                    }
+                }
+               
+                @include mobile {
+                    font-size: 2rem;
+                }
+            }
+            h2{
+                font-size: 3.5rem;
+                color: $primary;
+                margin-left: 10rem;
+                font-style: $font-heading;
+                @include mobile {
+                    font-size: 2rem;
+                }
+            }
+            h3{
+                font-size: 2.5rem;
+                color: $secondary;
+                @include mobile{
+                    font-size: 1.5rem;
+                }
+            }
+            p{
+                font-size: 1.25rem;
+                color: $primary;
+                margin-top: 1rem;
+                font-weight: 600;
+                font-style: $font-paragraph;
+                padding-right:2rem;
+    
+                @include mobile{
+                    font-size: 1rem;
+                    padding-right:0;
+                }
+            }
+            button{
+                margin-top: 1rem;
+                font-size: 1.5rem;
+                padding: 0.75rem 2rem;
+                background-color: $primary;
+                border: 0;
+                transform: skew(20deg, 0deg);
+                
+            a{
+                text-decoration: none;
+                color: $background1;
+                display: inline-block;
+                transform: skew(-20deg, 0deg);
+                
+            }
+            }
+            button:hover{
+                background-color: $secondary;
+                transform: skew(-20deg, 0deg);
+                a{
+                transform: skew(20deg, 0deg);
+                }
+            }
+        }
+
+
+        &_right{
+            width: 100%;
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+            @include tablet{
+                width: 100%;
+            }
+        }
+    }
+}
+
